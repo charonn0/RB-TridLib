@@ -37,7 +37,7 @@ Begin Window Window1
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   ""
-      Left            =   273
+      Left            =   260
       LockBottom      =   ""
       LockedInPosition=   False
       LockLeft        =   True
@@ -50,7 +50,7 @@ Begin Window Window1
       TextFont        =   "System"
       TextSize        =   0
       TextUnit        =   0
-      Top             =   75
+      Top             =   189
       Underline       =   ""
       Visible         =   True
       Width           =   80
@@ -64,11 +64,15 @@ End
 #tag Events PushButton1
 	#tag Event
 		Sub Action()
-		  Dim count As Integer = TridLib.LoadDefsPack(GetFolderItem("C:\Path"))
-		  MsgBox(Str(count))
 		  Dim f As FolderItem = GetOpenFolderItem("")
 		  Dim d() As TridLib.FileType = f.TrIDTypes
-		  Break
+		  Dim s As String
+		  
+		  For i As Integer = 0 To UBound(d)
+		    s = s + d(i).Extension + " (" + d(i).Description + ") " + Format(d(i).Points, "###,##0") + EndOfLine
+		  Next
+		  If s = "" Then s = "Unknown or error."
+		  MsgBox(s)
 		End Sub
 	#tag EndEvent
 #tag EndEvents
