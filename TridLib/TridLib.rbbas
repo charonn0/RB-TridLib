@@ -13,13 +13,7 @@ Protected Module TridLib
 	#tag EndMethod
 
 	#tag Method, Flags = &h1
-		Protected Function GetInfo(InfoType As Integer, InfoIndex As Integer) As Integer
-		  Return GetInfo(InfoType, InfoIndex, Nil)
-		End Function
-	#tag EndMethod
-
-	#tag Method, Flags = &h1
-		Protected Function GetInfo(InfoType As Integer, InfoIndex As Integer, Output As MemoryBlock) As Integer
+		Protected Function GetInfo(InfoType As Integer, InfoIndex As Integer, Output As MemoryBlock = Nil) As Integer
 		  If Output = Nil Then Output = New MemoryBlock(4 * 1024)
 		  If TridLib.IsAvailable Then Return TrID_GetInfo(InfoType, InfoIndex, Output)
 		End Function
