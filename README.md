@@ -1,5 +1,5 @@
 # RB-TridLib
-Realbasic glue code for [TridLib](http://mark0.net/code-tridlib-e.html), which is a tool for guessing file formats by analyzing patterns in the file data. TridLib is availble on Win32 only.
+Realbasic glue code for [TridLib](http://mark0.net/code-tridlib-e.html), which is a tool for guessing file formats by analyzing patterns in the file data. TridLib is available on Win32 only.
   
 ##Prerequisites
 The `TridLib.dll` and `TridDefs.trd` files must be located in the same directory as your app's executable.
