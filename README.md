@@ -1,10 +1,10 @@
 # RB-TridLib
 Realbasic glue code for [TridLib](http://mark0.net/code-tridlib-e.html), which is a tool for guessing file formats by analyzing patterns in the file data. TridLib is available on Win32 only.
   
-##Prerequisites
+## Prerequisites
 The `TridLib.dll` and `TridDefs.trd` files must be located in the same directory as your app's executable.
   
-##Basic usage
+## Basic usage
 The `TridLib` module provides an extension method for folderitems:
 
 ```vbnet
@@ -23,7 +23,7 @@ For example:
   Next
   ```
 
-##Advanced usage
+## Advanced usage
 The `TridLib` module has a number of protected functions which allow low-level access to TridLib should you need to do something not supported by the `TrIDTypes` method discussed above. These methods are:
 
 * `Analyze() As Integer`: Performs the analysis on a previously submitted file.
